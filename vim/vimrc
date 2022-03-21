@@ -1,0 +1,65 @@
+if !filereadable(expand('~/.vim/plug.vim'))
+  silent !curl -fLo ~/.vim/plug.vim
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+endif
+
+source ~/.vim/plug.vim
+
+call plug#begin()
+Plug 'andyl/vim-textobj-elixir'
+Plug 'chaoren/vim-wordmotion'
+Plug 'christoomey/vim-sort-motion'
+Plug 'kana/vim-textobj-user'
+Plug 'michaeljsmith/vim-indent-object'
+Plug 'wellle/targets.vim'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'google/vim-jsonnet'
+Plug 'sheerun/vim-polyglot'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'mattn/vim-lsp-settings'
+Plug 'itchyny/vim-qfedit'
+Plug 'jeetsukumaran/vim-buffergator'
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'reedes/vim-litecorrect'
+Plug 'tommcdo/vim-lion'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+call plug#end()
+
+if filereadable('/usr/local/bin/python')
+  let g:python_host_prog = '/usr/local/bin/python'
+end
+
+let mapleader="\<Space>"
+
+" Indentation
+set expandtab " use the right number of spaces when pressing tab
+set shiftwidth=2 " number of spaces to use on indentation
+set tabstop=4 " number of spaces used to display tabs
+
+" Search
+set incsearch " jump to the first match as typing
+set nohlsearch " do not highlight search results
+
+" Place splits where I expect when using `<c-w><c-v>` and `<c-w><c-s>`
+set splitbelow
+set splitright
+
+" Define how omifunc completion behave
+set completeopt=longest,menuone
+
+" Theming
+set background=light
+colorscheme PaperColor
+syntax enable
