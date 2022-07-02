@@ -4,30 +4,30 @@ if !filereadable(expand('~/.vim/plug.vim'))
 endif
 
 source ~/.vim/plug.vim
-
 call plug#begin()
+
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'SirVer/ultisnips'
 Plug 'andyl/vim-textobj-elixir'
 Plug 'chaoren/vim-wordmotion'
 Plug 'christoomey/vim-sort-motion'
-Plug 'kana/vim-textobj-user'
-Plug 'michaeljsmith/vim-indent-object'
-Plug 'wellle/targets.vim'
-Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'NLKNguyen/papercolor-theme'
-Plug 'google/vim-jsonnet'
-Plug 'sheerun/vim-polyglot'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'prabirshrestha/vim-lsp'
-Plug 'prabirshrestha/asyncomplete-lsp.vim'
-Plug 'mattn/vim-lsp-settings'
+Plug 'google/vim-jsonnet'
+Plug 'honza/vim-snippets'
 Plug 'itchyny/vim-qfedit'
 Plug 'jeetsukumaran/vim-buffergator'
+Plug 'kana/vim-textobj-function'
+Plug 'kana/vim-textobj-user'
+Plug 'mattn/vim-lsp-settings'
+Plug 'michaeljsmith/vim-indent-object'
 Plug 'ntpeters/vim-better-whitespace'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/vim-lsp'
 Plug 'reedes/vim-litecorrect'
+Plug 'sheerun/vim-polyglot'
 Plug 'tommcdo/vim-lion'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-eunuch'
@@ -35,6 +35,8 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
+Plug 'wellle/targets.vim'
+
 call plug#end()
 
 if filereadable('/usr/local/bin/python')
