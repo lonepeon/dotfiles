@@ -1,22 +1,14 @@
-PROMPT_COMMAND=__prompt_command
+PATH="${HOME}/.bin:${HOME}/Workspaces/go/bin:${PATH}";
 
-__prompt_command() {
-  local exitCode="$?";
-  local exitColor="32";
-  if [ ${exitCode} != 0 ]; then
-    exitColor="31";
-  fi
-
-  PS1="\W \$\e[1;${exitColor}m>\e[0m "
-}
-
-PATH="${HOME}/.bin:${PATH}";
 export EDITOR=nvim;
 export GIT_EDITOR=nvim;
 export GOPATH=${HOME}/Workspaces/go;
 export LANG=en_US.UTF-8;
 export LC_ALL=en_US.UTF-8;
 export PATH;
+export PS1='\W\$ ';
+export TERM=xterm-256color;
 export WORDCHARS='*?.[]~&;!#$%^(){}<>';
-alias ls='ls -G';
+
 alias ll='ls -lh';
+alias ls='ls -G';
