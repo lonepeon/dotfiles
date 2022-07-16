@@ -1,0 +1,14 @@
+#! /usr/bin/env bash
+
+sessionName=food;
+
+if ! tmux has-session -t "${sessionName}" &> /dev/null; then
+  TMUX='' tmux new-session -d -c ~/Workspaces/lonepeon/sport -s "sport";
+fi
+
+if [ -z "${TMUX}" ]; then
+  tmux attach-session -t "${sessionName}";
+else
+  tmux switch-client -t "${sessionName}";
+fi
+
