@@ -192,15 +192,10 @@ bar {
         }
 }
 
-assign [class="firefox"] 2
-assign [class="kitty"] 1
-
-set $mode_launcher Launch: [f]ood [s]port
 bindsym $mod+o mode "$mode_launcher"
 
 mode "$mode_launcher" {
-    bindsym f exec "kitty \\"$HOME/.bin/,food\\""
-    bindsym s exec "kitty \\"$HOME/.bin/,sport\\""
+    bindsym f exec "firefox"
 
     bindsym Escape mode "default"
     bindsym Return mode "default"
