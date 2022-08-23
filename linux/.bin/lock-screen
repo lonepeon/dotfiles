@@ -1,5 +1,0 @@
-#! /usr/bin/env bash
-
-i3lock \
-  --ignore-empty-password \
-  --image ~/.bin/wallpaper.png
