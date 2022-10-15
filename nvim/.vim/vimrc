@@ -51,6 +51,9 @@ set expandtab " use the right number of spaces when pressing tab
 set shiftwidth=2 " number of spaces to use on indentation
 set tabstop=4 " number of spaces used to display tabs
 
+" Keep cursor centered on screen
+set scrolloff=999
+
 " Search
 set incsearch " jump to the first match as typing
 set nohlsearch " do not highlight search results

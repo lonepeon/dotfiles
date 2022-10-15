@@ -8,7 +8,6 @@
   g = grep --break --heading --line-number
   l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset' --abbrev-commit
   oops = commit -S --amend --no-edit
-  open = ! gh repo view --web
   p = push -u
   pf = push --force-with-lease
   s = status --branch --short
