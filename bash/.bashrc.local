@@ -12,3 +12,5 @@ export WORDCHARS='*?.[]~&;!#$%^(){}<>';
 
 alias ll='ls -lh';
 alias ls='ls -G';
+
+alias cdroot='cd $(git root)'
