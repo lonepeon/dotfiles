@@ -11,7 +11,7 @@ for f in ~/.zsh/functions/*; do autoload -Uz ${f##*/}; done
 bindkey -e
 autoload -U edit-command-line;
 zle -N edit-command-line;
-bindkey '^x^e' edit-command-line # Edit current line with C-f
+bindkey '^x^e' edit-command-line # Edit current line with C-x+C-e
 bindkey '^[[1;9D' backward-word # Alt-Left
 bindkey '^[[1;9C' forward-word # Alt-Right
 bindkey '^[[1;3D' backward-word # Alt-Left
