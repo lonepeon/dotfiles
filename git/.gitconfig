@@ -1,4 +1,6 @@
 [alias]
+  amend = ! git commit -m chunk-to-amend && git rebase -i origin/main
+  update = rebase origin/main
   ci = commit -S
   clean-branches = ! git branch -vv | grep "gone]" | awk '{ print $1 }' | xargs git branch -D
   co = checkout
