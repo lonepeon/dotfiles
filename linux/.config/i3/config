@@ -46,6 +46,9 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Ctrl+1 exec i3-msg '[class="kitty"] focus' || kitty
+bindsym $mod+Ctrl+2 exec i3-msg '[class="Chromium"] focus' || chromium
+bindsym $mod+Ctrl+3 exec i3-msg '[class="1Password"] focus' || 1password
 
 # kill focused window
 bindsym $mod+Shift+q kill
