@@ -66,11 +66,6 @@ lsp.rust_analyzer.setup({
 local servers = {
   'golangci_lint_ls', -- Go linter
   'gopls', -- Go
-  'tsserver', -- Typescript
-  'html', -- HTML
-  'cssls', -- CSS
-  'jsonls', -- Json
-  'yamlls', -- YAML
 }
 
 
