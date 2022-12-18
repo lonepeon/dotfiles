@@ -47,19 +47,13 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-bindsym $mod+Return exec kitty
-bindsym $mod+Ctrl+1 exec i3-msg '[class="kitty"] focus' || kitty
-bindsym $mod+Ctrl+2 exec i3-msg '[class="Chromium"] focus' || chromium
-bindsym $mod+Ctrl+3 exec i3-msg '[class="1Password"] focus' || 1password
+bindsym $mod+Return exec i3-msg '[class="kitty"] focus' || kitty
+bindsym $mod+b exec i3-msg '[class="Chromium"] focus' || chromium
+bindsym $mod+p exec i3-msg '[class="1Password"] focus' || 1password
 
 bindsym $mod+Shift+q kill
 
 bindsym $mod+d exec --no-startup-id dmenu_run
-# A more modern dmenu replacement is rofi:
-# bindcode $mod+40 exec "rofi -modi drun,run -show drun"
-# There also is i3-dmenu-desktop which only displays applications shipping a
-# .desktop file. It is a wrapper around dmenu, so you need that installed.
-# bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -154,6 +148,7 @@ client.unfocused            $fgColor   $bgColor     $fgColor
 bar {
   position top
   status_command i3status
+  tray_padding 4px
   font pango:monospace 10, pango:Font Awesome 6 Free 10
 
   colors {
