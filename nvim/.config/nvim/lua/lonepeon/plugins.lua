@@ -41,7 +41,13 @@ return require('packer').startup({
       requires = {{ 'tpope/vim-repeat', event = 'BufRead', }}
     })
 
-    use({'tpope/vim-commentary'})
+    use({
+      'numToStr/Comment.nvim',
+      config = function()
+        require('Comment').setup()
+      end
+    })
+
 
     use({'tpope/vim-eunuch'})
 

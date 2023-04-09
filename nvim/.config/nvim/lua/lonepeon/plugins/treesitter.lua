@@ -7,6 +7,7 @@ require('nvim-treesitter.configs').setup({
     'lua',
     'markdown',
     'rust',
+    'html',
     'yaml',
   },
   highlight = {

@@ -43,6 +43,7 @@ lsp.rust_analyzer.setup({
   flags = flags,
   capabilities = capabilities,
   on_attach = on_attach,
+  cmd = {'rustup', 'run', 'stable', 'rust-analyzer'},
   settings = {
     ['rust-analyzer'] = {
       cargo = {
