@@ -14,3 +14,5 @@ export PATH;
 export STOW_DIR=${HOME}/Workspaces/lonepeon/dotfiles;
 export TERM=xterm-256color;
 export WORDCHARS='*?.[]~&;!#$%^(){}<>';
+
+source "${HOME}/.cargo/env"

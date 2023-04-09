@@ -44,6 +44,5 @@ setopt PROMPT_SUBST
 export PROMPT='%F{235}%B%c%b%f %(?.%F{24}❯%f.%F{198}❯%f) '
 
 source ${HOME}/.zsh/aliases;
-[[ -r ${HOME}/.asdf/asdf.sh ]] && source ${HOME}/.asdf/asdf.sh;
 [[ -r ${HOME}/.zshrc.local ]] && source ${HOME}/.zshrc.local;
 true
