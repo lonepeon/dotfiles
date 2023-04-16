@@ -24,16 +24,16 @@ return require('packer').startup({
       { 'nvim-treesitter/nvim-treesitter-textobjects', after = 'nvim-treesitter' },
     })
 
-    -- Theme
-    use({
-       'Mofiqul/vscode.nvim',
-       config = function()
-         require('lonepeon.plugins.vscode')
-       end
-     })
-
     -- Editing and Navigation
     use({'gpanders/editorconfig.nvim'})
+
+    use({
+      'kosayoda/nvim-lightbulb',
+      requires = 'antoinemadec/FixCursorHold.nvim',
+      config = function()
+        require('nvim-lightbulb').setup({autocmd = {enabled = true}})
+      end
+    })
 
     use({
       'tpope/vim-surround',
@@ -82,7 +82,6 @@ return require('packer').startup({
       end,
     }
 
-
     -- LSP, Completions and Snippet
     use({
       'neovim/nvim-lspconfig',
@@ -114,5 +113,13 @@ return require('packer').startup({
       { 'hrsh7th/cmp-path', after = 'nvim-cmp' },
       { 'hrsh7th/cmp-buffer', after = 'nvim-cmp' },
     })
+
+    -- Theme
+    use({
+       'Mofiqul/vscode.nvim',
+       config = function()
+         require('lonepeon.plugins.vscode')
+       end
+     })
   end
 })

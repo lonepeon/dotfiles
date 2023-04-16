@@ -26,8 +26,8 @@ neotest.setup({
     failed = "x",
   },
   highlights = {
-    passed = 'NeotestPassed',
-    failed = 'NeotestFailed',
+    passed = 'GitSignsAdd',
+    failed = 'GitSignsDelete',
   }
 })
 

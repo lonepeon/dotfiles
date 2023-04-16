@@ -9,6 +9,9 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
+# Dependencies:
+# sudo apt install xautolock nitrogen
+
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -28,7 +31,8 @@ exec --no-startup-id dex --autostart --environment i3
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+#exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec "xautolock -detectsleep -time 3 -locker \"i3lock -c 000000\""
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -50,6 +54,7 @@ floating_modifier $mod
 bindsym $mod+Return exec i3-msg '[class="kitty"] focus' || kitty
 bindsym $mod+b exec i3-msg '[class="Chromium"] focus' || chromium
 bindsym $mod+p exec i3-msg '[class="1Password"] focus' || 1password
+bindsym $mod+Control+l exec "i3lock -c 000000"
 
 bindsym $mod+Shift+q kill
 
