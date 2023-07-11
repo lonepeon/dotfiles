@@ -55,6 +55,10 @@ bindsym $mod+Return exec i3-msg '[class="kitty"] focus' || kitty
 bindsym $mod+b exec i3-msg '[class="Chromium"] focus' || chromium
 bindsym $mod+p exec i3-msg '[class="1Password"] focus' || 1password
 bindsym $mod+Control+l exec "i3lock -c 000000"
+bindsym Shift+Print exec maim -s -u | xclip -selection clipboard -t image/png -i
+bindsym $mod+Shift+Print exec maim -s -u ~/Pictures/screenshot-$(date +%s).png
+bindsym Print exec maim -u | xclip -selection clipboard -t image/png -i
+bindsym $mod+Print exec maim -u ~/Pictures/screenshot-$(date +%s).png
 
 bindsym $mod+Shift+q kill
 
