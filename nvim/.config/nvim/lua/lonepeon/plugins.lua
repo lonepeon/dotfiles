@@ -28,14 +28,6 @@ return require('packer').startup({
     use({'gpanders/editorconfig.nvim'})
 
     use({
-      'kosayoda/nvim-lightbulb',
-      requires = 'antoinemadec/FixCursorHold.nvim',
-      config = function()
-        require('nvim-lightbulb').setup({autocmd = {enabled = true}})
-      end
-    })
-
-    use({
       'tpope/vim-surround',
       event = 'BufRead',
       requires = {{ 'tpope/vim-repeat', event = 'BufRead', }}
@@ -59,7 +51,10 @@ return require('packer').startup({
     })
 
     use({ 'nvim-telescope/telescope.nvim',
-      requires={{'nvim-lua/plenary.nvim'}},
+      requires={
+        {'nvim-lua/plenary.nvim'},
+        {'nvim-telescope/telescope-ui-select.nvim'}
+      },
       config = function()
         require('lonepeon.plugins.telescope')
       end,

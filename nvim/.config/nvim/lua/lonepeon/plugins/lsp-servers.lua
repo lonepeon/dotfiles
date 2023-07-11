@@ -15,7 +15,6 @@ local function mappings(buf)
   -- vim.keymap.set('n', '<leader>wr',  vim.lsp.buf.remove_workspace_folder, opts)
   -- vim.keymap.set('n', '<leader>wl',  print(vim.inspect(vim.lsp.buf.list_workspace_folders(), opts)
   vim.keymap.set('n', '<leader>lc',  vim.lsp.buf.code_action, opts)
-  vim.keymap.set('n', '<leader>so', [[<cmd>lua require('telescope.builtin').lsp_document_symbols()<CR>]], opts)
   vim.keymap.set('n', '<leader>lt',  vim.lsp.buf.type_definition, opts)
   vim.keymap.set('n', '<leader>lR',  vim.lsp.buf.rename, opts)
   vim.keymap.set('n', '<leader>le',  vim.diagnostic.open_float, opts)
@@ -44,6 +43,9 @@ lsp.rust_analyzer.setup({
   cmd = {'rustup', 'run', 'stable', 'rust-analyzer'},
   settings = {
     ['rust-analyzer'] = {
+      diagnostics = {
+        enable = true,
+      },
       cargo = {
         allFeatures = true,
       },
@@ -52,6 +54,7 @@ lsp.rust_analyzer.setup({
         command = 'clippy',
       },
       procMacro = {
+        enabled = false,
         ignored = {
           ['async-trait'] = { 'async_trait' },
           ['napi-derive'] = { 'napi' },
